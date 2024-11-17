@@ -4,14 +4,14 @@
 let saldo = 0
 let saldoBitcoin = 0
 let valorBitcoin = 0
-
+let valorBitcoinReais = 523811
 //função de comprar bitcoin
 function comprarBitcoin() {
     let quantidade = prompt("Quantos bitcoins você deseja comprar?")
     quantidade = Number(quantidade)
     if (quantidade > 0) {
         saldoBitcoin += quantidade
-        alert(`Você comprou ${quantidade} bitcoins. Seu saldo atual é de ${saldoBitcoin} bitcoins. O valor em reais foi de R$${quantidade * 523811}.`)
+        alert(`Você comprou ${quantidade} bitcoins. Seu saldo atual é de ${saldoBitcoin} bitcoins. O valor em reais foi de R$${quantidade * valorBitcoinReais },00.`)
     } else {
         alert("Você não pode comprar bitcoins negativos.")
     }
@@ -24,7 +24,7 @@ function venderBitcoin() {
     if (quantidade > 0) {
         if (quantidade <= saldoBitcoin) {
             saldoBitcoin -= quantidade
-            alert(`Você vendeu ${quantidade} bitcoins. Seu saldo atual é de ${saldoBitcoin} bitcoins. O valor em reais foi de R$${quantidade * 523811}.`)
+            alert(`Você vendeu ${quantidade} bitcoins. Seu saldo atual é de ${saldoBitcoin} bitcoins. O valor em reais foi de R$${quantidade * valorBitcoinReais },00.`)
         } else {
             alert("Você não possui essa quantidade de bitcoins para vender.")
         }
@@ -41,7 +41,7 @@ switch (prompt("O que você deseja fazer? \n1 - Comprar bitcoins \n2 - Vender b
         venderBitcoin()
         break
     case "3": //ver saldo
-        alert(`Seu saldo atual é de ${saldoBitcoin} bitcoins. O valor em reais foi de R$${saldoBitcoin * 523811}.`)
+        alert(`Seu saldo atual é de ${saldoBitcoin} bitcoins. O valor em reais foi de R$${saldoBitcoin * valorBitcoinReais },00.`)
         break
     case "4": //como funciona o bitcoin
     alert(" Bitcoin é uma criptomoeda digital que funciona como uma moeda de troca virtual. \nO bitcoin foi criado em 2009 por Satoshi Nakamoto, um programador americano. \nVocê pode comprar bitcoins usando seu saldo em reais, e vender bitcoins usando seu saldo em bitcoins. \nAqui estão algumas das principais características do Bitcoin:	 \nTransações: As pessoas podem enviar e receber Bitcoins entre si. Essas transações são agrupadas em blocos. \nBlockchain: A blockchain é um livro-razão público e descentralizado onde todas as transações de Bitcoin são registradas. Cada bloco contém um conjunto de transações e é ligado ao bloco anterior, formando uma cadeia. \nMineração: Os mineradores são indivíduos ou organizações que utilizam computadores poderosos para resolver complexos problemas matemáticos. Esse processo de mineração confirma e verifica as transações de Bitcoin, adicionando novos blocos à blockchain. Em troca, os mineradores são recompensados com novos Bitcoins. \nDescentralização: Não há uma autoridade central controlando o Bitcoin. A rede é mantida por uma vasta rede de computadores ao redor do mundo, tornando-a resistente à censura e ao controle centralizado. \nCarteira Digital: Para armazenar e utilizar Bitcoins, você precisa de uma carteira digital, que pode ser um software em seu computador ou smartphone. \n")
