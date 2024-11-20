@@ -3,7 +3,7 @@
 //variáveis
 let saldo = 0
 let saldoBitcoin = 0
-let valorBitcoinReais = 523811
+let valorBitcoinReais = 523.811
 //função de comprar bitcoin
 function comprarBitcoin() {
     // Solicita ao usuário a quantidade de Bitcoins a comprar
