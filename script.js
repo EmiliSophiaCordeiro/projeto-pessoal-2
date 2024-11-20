@@ -3,30 +3,31 @@
 //variáveis
 let saldo = 0
 let saldoBitcoin = 0
-let valorBitcoin = 0
 let valorBitcoinReais = 523811
 //função de comprar bitcoin
 function comprarBitcoin() {
+    // Solicita ao usuário a quantidade de Bitcoins a comprar
     let quantidade = prompt("Quantos bitcoins você deseja comprar?")
-    quantidade = Number(quantidade)
-    if (quantidade > 0) {
-        saldoBitcoin += quantidade
+    quantidade = Number(quantidade)// Converte a entrada para número
+    if (quantidade > 0) {// Verifica se a quantidade é positiva
+        saldoBitcoin += quantidade// Adiciona a quantidade ao saldo de Bitcoins
         alert(`Você comprou ${quantidade} bitcoins. Seu saldo atual é de ${saldoBitcoin} bitcoins. O valor em reais foi de R$${quantidade * valorBitcoinReais },00.`)
     } else {
-        alert("Você não pode comprar bitcoins negativos.")
+        alert("Você não pode comprar bitcoins negativos.")// Alerta para entrada inválida 
     }
     }
 
 //função de vender bitcoin
 function venderBitcoin() {
+    // Solicita ao usuário a quantidade de Bitcoins a vender
     let quantidade = prompt("Quantos bitcoins você deseja vender?")
-    quantidade = Number(quantidade)
-    if (quantidade > 0) {
-        if (quantidade <= saldoBitcoin) {
-            saldoBitcoin -= quantidade
+    quantidade = Number(quantidade)// Converte a entrada para número
+    if (quantidade > 0) {// Verifica se a quantidade é positiva
+        if (quantidade <= saldoBitcoin) {// Verifica se o usuário tem Bitcoins suficientes para vender
+            saldoBitcoin -= quantidade// Subtrai a quantidade do saldo de Bitcoins
             alert(`Você vendeu ${quantidade} bitcoins. Seu saldo atual é de ${saldoBitcoin} bitcoins. O valor em reais foi de R$${quantidade * valorBitcoinReais },00.`)
         } else {
-            alert("Você não possui essa quantidade de bitcoins para vender.")
+            alert("Você não possui essa quantidade de bitcoins para vender.")// Alerta para saldo insuficiente
         }
     }}
 
