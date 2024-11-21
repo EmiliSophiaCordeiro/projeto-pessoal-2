@@ -34,7 +34,7 @@ function venderBitcoin() {
     //loop
  while (true) {
     //menu
-switch (prompt("O que você deseja fazer? \n1 - Comprar bitcoins \n2 - Vender bitcoins \n3 - Ver saldo \n4 - Como funciona o Bitcoin \n5 - Quanto custa o Bitcoin \n6 - Sair")) {
+switch (prompt(" Bem-vindo ao seu gerenciador de bitcoin!. Oque você deseja fazer? \n1 - Comprar bitcoins \n2 - Vender bitcoins \n3 - Ver saldo \n4 - Como funciona o Bitcoin \n5 - Quanto custa o Bitcoin \n6 - Sair")) {
     case "1": //comprar
         comprarBitcoin()
         break
