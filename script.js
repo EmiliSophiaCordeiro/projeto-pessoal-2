@@ -55,7 +55,3 @@ switch (prompt(" Bem-vindo ao seu gerenciador de bitcoin!. Oque você deseja fa
         break
         default:
 }}
-
-
-
-
