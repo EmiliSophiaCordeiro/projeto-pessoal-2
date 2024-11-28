@@ -53,5 +53,4 @@ switch (prompt(" Bem-vindo ao seu gerenciador de bitcoin!. Oque você deseja fa
         case "6": //sair
         alert("Obrigado por usar o gerenciador de bitcoins!")
         break
-          default;
 }}
